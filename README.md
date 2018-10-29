@@ -6,7 +6,7 @@
 ## Improvements for Future:
     1. Need to check if EC2 instance already provisioned if yes do not re-provision
     2. Need to merge the 2 playbooks.
-    3. include ssh-keyscan mechanism to scan and propagate the keys to inventory of hosts.
+    3. ssh-keyscan mechanism to scan and propagate the keys to inventory of hosts.
     4. Remove hardcoded Route53 zone.
     5. Parameterized role in msrtestenv to use with_items or any loop of group hosts passed like groups.docker in our case.
     6. EC2 security groups as code.
@@ -19,7 +19,27 @@
 4. Create a github account to store the code.
 5. Inside /etc/ansible/hosts define groups and vars required.
 
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[docker]
+MSR-test-instance-1
+MSR-test-instance-2
+
+[webservers:vars]
+container=webserver
+
+[webservers]
+MSR-test-instance-1
+
+[couchDB:vars]
+container=couchDB
+
+[couchDB]
+MSR-test-instance-2
+
    ansible-playbook msrtestenv.yml
+   
    ansible-playbook msritcustom.yml
 
 ## Resources:
