@@ -1,7 +1,7 @@
 # Ansible Bootstrap EC2 instances with roles.
 
 ## Assumptions:
-   1. We are going to use Route53 to access the servers using their public hostsname.
+   1. EC2 hostnames customization based off Route53 domain.
    
 ## Improvements for Future:
     1. Need to check if EC2 instance already provisioned if yes do not re-provision
@@ -31,9 +31,8 @@ ansible-playbook msrtestenv.yml
 ansible-playbook msritcustom.yml
 
 ## Resources:
-
-http://scraplab.net/custom-ec2-hostnames-and-dns-entries/
-github.com/geerlingguy/ansible-role-docker
-https://github.com/geerlingguy/ansible-role-pip/
-https://hub.docker.com/_/httpd/
-https://hub.docker.com/_/couchdb/
+   1. http://scraplab.net/custom-ec2-hostnames-and-dns-entries/
+   2. http://github.com/geerlingguy/ansible-role-docker
+   3. https://github.com/geerlingguy/ansible-role-pip/
+   4. https://hub.docker.com/_/httpd/
+   5. https://hub.docker.com/_/couchdb/
