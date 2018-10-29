@@ -5,7 +5,8 @@
    
 ## Improvements for Future:
     1. Need to check if EC2 instance already provisioned if yes do not re-provision
-    2. Need to merge the 2 playbooks we have into one as the test setup do not have proper delegation of zone used to provision this environment.
+    2. Need to merge the 2 playbooks.
+    3. include ssh-keyscan mechanism to scan and propagate the keys to inventory of hosts.
     
 ## Ansible Roles example taken from
 geerlingguy
