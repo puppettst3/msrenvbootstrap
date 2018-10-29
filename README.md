@@ -2,6 +2,7 @@
 
 ## Assumptions:
    1. EC2 hostnames customization based off Route53 domain.
+   2. Default security group is going to allow traffic to port 80, 5984 ( we can move this to ansible if required )
    
 ## Improvements for Future:
     1. Need to check if EC2 instance already provisioned if yes do not re-provision
@@ -21,7 +22,7 @@
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
-
+7. 
 [docker]
 MSR-test-instance-1
 MSR-test-instance-2
@@ -38,8 +39,12 @@ container=couchDB
 [couchDB]
 MSR-test-instance-2
 
+6. Create the EC2 instances by running below environment.
    ansible-playbook msrtestenv.yml
-   
+
+7. Due to Public zone access capability lack we are going to hardcode the instance IP's into /etc/hosts
+8. Log into accept ssh key by logging into them ( This is one of the future improvement )
+9. Next run the ansible dockerization playbook.
    ansible-playbook msritcustom.yml
 
 ## Resources:
