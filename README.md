@@ -20,27 +20,27 @@
 4. Create a github account to store the code.
 5. Inside /etc/ansible/hosts define groups and vars required.
 
-   [all:vars]
-   ansible_python_interpreter=/usr/bin/python3 
-   [docker]
-   MSR-test-instance-1
-   MSR-test-instance-2
-   [webservers:vars]
-   container=webserver
-   [webservers]
-   MSR-test-instance-1
-   [couchDB:vars]
+   <br />[all:vars]
+   <br />ansible_python_interpreter=/usr/bin/python3 
+   <br />[docker]
+   <br />MSR-test-instance-1
+   <br />MSR-test-instance-2
+   <br />[webservers:vars]
+   <br />container=webserver
+   <br />[webservers]
+   <br />MSR-test-instance-1
+   <br />[couchDB:vars]
    container=couchDB
-   [couchDB]
-   MSR-test-instance-2
+   <br />[couchDB]
+   <br />MSR-test-instance-2
   
 6. Create the EC2 instances by running below environment.
-   ansible-playbook msrtestenv.yml
+   <br />ansible-playbook msrtestenv.yml
 
 7. Due to Public zone access capability lack we are going to hardcode the instance IP's into /etc/hosts
 8. Log into accept ssh key by logging into them ( This is one of the future improvement )
 9. Next run the ansible dockerization playbook.
-   ansible-playbook msritcustom.yml
+   <br />ansible-playbook msritcustom.yml
 
 ## Resources:
    1. http://scraplab.net/custom-ec2-hostnames-and-dns-entries/
