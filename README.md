@@ -8,6 +8,7 @@
     2. Need to merge the 2 playbooks.
     3. include ssh-keyscan mechanism to scan and propagate the keys to inventory of hosts.
     4. Remove hardcoded Route53 zone.
+    5. Parameterized role in msrtestenv to use with_items or any loop of group hosts passed like groups.docker in our case.
     
 ## Ansible Roles example taken from
 geerlingguy
