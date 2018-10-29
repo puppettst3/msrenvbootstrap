@@ -18,7 +18,9 @@
 2. Create a role with privileges required to provision EC2 instances and administer Route53 domain.
 3. Assign the role created to the EC2 ansible instnace so as to not to hardcode any user keys in the code.
 4. Create a github account to store the code.
-5. Inside /etc/ansible/hosts define groups and vars required.
+5. Install ansible on the instance.
+<br /> sudo apt-get update && sudo apt-get install ansible -y
+6. Inside /etc/ansible/hosts define groups and vars required.
 
    <br />[all:vars]
    <br />ansible_python_interpreter=/usr/bin/python3 
@@ -34,12 +36,12 @@
    <br />[couchDB]
    <br />MSR-test-instance-2
   
-6. Create the EC2 instances by running below environment.
+7. Create the EC2 instances by running below environment.
    <br />ansible-playbook msrtestenv.yml
 
-7. Due to Public zone access capability lack we are going to hardcode the instance IP's into /etc/hosts
-8. Log into accept ssh key by logging into them ( This is one of the future improvement )
-9. Next run the ansible dockerization playbook.
+8. Due to Public zone access capability lack we are going to hardcode the instance IP's into /etc/hosts
+9. Log into accept ssh key by logging into them ( This is one of the future improvement )
+10. Next run the ansible dockerization playbook.
    <br />ansible-playbook msritcustom.yml
 
 ## Resources:
