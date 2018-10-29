@@ -17,3 +17,7 @@ Due to this we have to use an ansible variable ansible_python_interpreter for in
 
 Inside pip role we have changed default var pip_package to pytho3-pip
 
+## How to provision and assign the roles.
+
+ansible-playbook msrtestenv.yml
+ansible-playbook msritcustom.yml
