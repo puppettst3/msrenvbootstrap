@@ -20,25 +20,20 @@
 4. Create a github account to store the code.
 5. Inside /etc/ansible/hosts define groups and vars required.
 
-[all:vars]
-ansible_python_interpreter=/usr/bin/python3
-7. 
-[docker]
-MSR-test-instance-1
-MSR-test-instance-2
-
-[webservers:vars]
-container=webserver
-
-[webservers]
-MSR-test-instance-1
-
-[couchDB:vars]
-container=couchDB
-
-[couchDB]
-MSR-test-instance-2
-
+   [all:vars]
+   ansible_python_interpreter=/usr/bin/python3 
+   [docker]
+   MSR-test-instance-1
+   MSR-test-instance-2
+   [webservers:vars]
+   container=webserver
+   [webservers]
+   MSR-test-instance-1
+   [couchDB:vars]
+   container=couchDB
+   [couchDB]
+   MSR-test-instance-2
+  
 6. Create the EC2 instances by running below environment.
    ansible-playbook msrtestenv.yml
 
