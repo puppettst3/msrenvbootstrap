@@ -10,25 +10,17 @@
     4. Remove hardcoded Route53 zone.
     5. Parameterized role in msrtestenv to use with_items or any loop of group hosts passed like groups.docker in our case.
     6. EC2 security groups as code.
-    
-## Ansible Roles example taken from
-geerlingguy
-    
-## Environment setup:
-In our environment we have provisioned ec2 instances using Ubuntu Images which have python3 installed
-Due to this we have to use an ansible variable ansible_python_interpreter for inventory hosts to support the execution.
-
-Inside pip role we have changed default var pip_package to pytho3-pip
 
 ## How to provision and assign the roles.
 
 1. Create a AWS account to use.
-2. Create a user with EC2 instance to use provision environemnt
-3. Create an IAM role with the privileges required to create EC2 instances and Route53 administrative privileges.
-4. Assign the role create to the EC2 instnace created so as to not hardcode any user keys in the code.
+2. Create a role with privileges required to provision EC2 instances and administer Route53 domain.
+3. Assign the role created to the EC2 ansible instnace so as to not to hardcode any user keys in the code.
+4. Create a github account to store the code.
+5. Inside /etc/ansible/hosts define groups and vars required.
 
-ansible-playbook msrtestenv.yml
-ansible-playbook msritcustom.yml
+   ansible-playbook msrtestenv.yml
+   ansible-playbook msritcustom.yml
 
 ## Resources:
    1. http://scraplab.net/custom-ec2-hostnames-and-dns-entries/
