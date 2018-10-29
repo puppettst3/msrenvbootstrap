@@ -29,3 +29,11 @@ Inside pip role we have changed default var pip_package to pytho3-pip
 
 ansible-playbook msrtestenv.yml
 ansible-playbook msritcustom.yml
+
+## Resources:
+
+http://scraplab.net/custom-ec2-hostnames-and-dns-entries/
+github.com/geerlingguy/ansible-role-docker
+https://github.com/geerlingguy/ansible-role-pip/
+https://hub.docker.com/_/httpd/
+https://hub.docker.com/_/couchdb/
