@@ -17,3 +17,15 @@
   roles:
     - pip
     - docker
+
+- hosts: couchDB
+  become: yes
+  become_method: sudo
+  vars:
+    pip_install_packages:
+      - docker
+      - docker-compose
+    container: couchDB
+  roles:
+     - pip
+     - docker
