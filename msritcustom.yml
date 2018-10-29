@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+    - nvm 
+
+- hosts: webservers
+  become: yes
+  become_method: sudo
+  vars:
+    pip_install_packages:
+      - docker
+      - docker-compose
+    container: webserver
+  roles:
+    - pip
+    - docker

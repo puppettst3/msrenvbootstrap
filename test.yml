@@ -1,0 +1,7 @@
+- name:  moo
+  hosts: localhost
+  gather_facts: False
+
+  tasks:
+    - shell: echo "{{ item }}"
+      with_items: "{{ groups.docker }}"
