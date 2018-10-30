@@ -50,6 +50,7 @@
    3. https://github.com/geerlingguy/ansible-role-pip/
    4. https://hub.docker.com/_/httpd/
    5. https://hub.docker.com/_/couchdb/
+   6. https://help.ubuntu.com/community/CloudInit
    
 ## One more way to simplify the installation and custom hostnames
 <br /> Servers behind private subnets
