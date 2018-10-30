@@ -55,4 +55,4 @@
 <br /> Servers behind private subnets
 <br /> No Public IP
 <br /> Autoscaling groups in use.
-   https://eazevedoaws.wordpress.com/2016/04/24/ansible-and-aws-provisioning-ec2-instances/
+<br /> https://eazevedoaws.wordpress.com/2016/04/24/ansible-and-aws-provisioning-ec2-instances/
