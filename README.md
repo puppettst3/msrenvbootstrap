@@ -50,3 +50,9 @@
    3. https://github.com/geerlingguy/ansible-role-pip/
    4. https://hub.docker.com/_/httpd/
    5. https://hub.docker.com/_/couchdb/
+   
+## One more way to simplify the installation and custom hostnames
+<br /> Servers behind private subnets
+<br /> No Public IP
+<br /> Autoscaling groups in use.
+   https://eazevedoaws.wordpress.com/2016/04/24/ansible-and-aws-provisioning-ec2-instances/
